@@ -90,84 +90,84 @@ void main(List<String> arguments) {
   //   }
   // }
 
-  // print('\n-----Lista-de-numeros-pares-----');
+  print('\n-----Lista-de-numeros-pares-----');
 
-  // pares();
+  pares();
 
-  // print('\n-----Verificar-numero-na-lista-----');
+  print('\n-----Verificar-numero-na-lista-----');
 
-  // print('\nDigite o numero:');
-  // int? numero = int.parse(stdin.readLineSync()!);
-  // String result = encontrarNumero(numero);
-  // print(result);
+  print('\nDigite o numero:');
+  int? numero = int.parse(stdin.readLineSync()!);
+  String result = encontrarNumero(numero);
+  print(result);
 }
 
 // Funções
 
-somar(num1, num2) {
-  double resultado = num1 + num2;
-  return resultado;
-}
+// somar(num1, num2) {
+//   double resultado = num1 + num2;
+//   return resultado;
+// }
 
-sub(num1, num2) {
-  double resultado = num1 - num2;
-  return resultado;
-}
+// sub(num1, num2) {
+//   double resultado = num1 - num2;
+//   return resultado;
+// }
 
-mult(num1, num2) {
-  double resultado = num1 * num2;
-  return resultado;
-}
+// mult(num1, num2) {
+//   double resultado = num1 * num2;
+//   return resultado;
+// }
 
-divi(num1, num2) {
-  double resultado = num1 / num2;
-  return resultado;
-}
+// divi(num1, num2) {
+//   double resultado = num1 / num2;
+//   return resultado;
+// }
 
-verificarIdade(idade) {
-  if (idade <= 12) {
-    return "Você é uma criança";
-  } else if (idade <= 18) {
-    return "Você é um adolescente";
-  } else if (idade <= 59) {
-    return "Você é um adulto/a";
-  } else {
-    return "Você é um idoso/a";
-  }
-}
+// verificarIdade(idade) {
+//   if (idade <= 12) {
+//     return "Você é uma criança";
+//   } else if (idade <= 18) {
+//     return "Você é um adolescente";
+//   } else if (idade <= 59) {
+//     return "Você é um adulto/a";
+//   } else {
+//     return "Você é um idoso/a";
+//   }
+// }
 
-maiorValor(num1, num2) {
-  if (num1 > num2) {
-    return "O primeiro número é maior";
-  } else if (num2 > num1) {
-    return "O segundo número é maior";
-  } else {
-    return "Os números são iguais";
-  }
-}
+// maiorValor(num1, num2) {
+//   if (num1 > num2) {
+//     return "O primeiro número é maior";
+//   } else if (num2 > num1) {
+//     return "O segundo número é maior";
+//   } else {
+//     return "Os números são iguais";
+//   }
+// }
 
-verificarMediaGeral(nota1, nota2, nota3) {
-  double media = (nota1 + nota2 + nota3) / 3;
-  if (media < 60) {
-    return "Sua média final foi D";
-  } else if (media >= 60 && media < 75) {
-    return "Sua média final foi C";
-  } else if (media >= 75 && media < 85) {
-    return "Sua média final foi B";
-  } else {
-    return "Sua média final foi A";
-  }
-}
+// verificarMediaGeral(nota1, nota2, nota3) {
+//   double media = (nota1 + nota2 + nota3) / 3;
+//   if (media < 60) {
+//     return "Sua média final foi D";
+//   } else if (media >= 60 && media < 75) {
+//     return "Sua média final foi C";
+//   } else if (media >= 75 && media < 85) {
+//     return "Sua média final foi B";
+//   } else {
+//     return "Sua média final foi A";
+//   }
+// }
 
-tabuada(int numero) {
-  int i = 1;
+// tabuada(int numero) {
+//   int i = 1;
 
-  while (i <= 10) {
-    int resultado = i * numero;
-    print("$i X $numero = $resultado");
-    i++;
-  }
-}
+//   while (i <= 10) {
+//     int resultado = i * numero;
+//     print("$i X $numero = $resultado");
+//     i++;
+//   }
+// }
 
 pares() {
   var listaPar = [];

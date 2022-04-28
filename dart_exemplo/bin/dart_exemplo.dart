@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:dart_exemplo/dart_exemplo.dart' as dart_exemplo;
 
 void main(List<String> arguments) {
   // print('\n-------------');
@@ -51,19 +50,48 @@ void main(List<String> arguments) {
   // String resultadoMaiorValor = maiorValor(num3, num4);
   // print(resultadoMaiorValor);
 
-  print('\n-----Definir-Média-Notas-----');
+  // print('\n-----Definir-Média-Notas-----');
 
-  print('\nDigite a primeira nota:');
-  double? nota1 = double.parse(stdin.readLineSync()!);
-  print('\nDigite a segunda nota:');
-  double? nota2 = double.parse(stdin.readLineSync()!);
-  print('\nDigite a terceira nota:');
-  double? nota3 = double.parse(stdin.readLineSync()!);
-  String resultadoMediaNotas = verificarMediaGeral(nota1, nota2, nota3);
-  print(resultadoMediaNotas);
+  // print('\nDigite a primeira nota:');
+  // double? nota1 = double.parse(stdin.readLineSync()!);
+  // print('\nDigite a segunda nota:');
+  // double? nota2 = double.parse(stdin.readLineSync()!);
+  // print('\nDigite a terceira nota:');
+  // double? nota3 = double.parse(stdin.readLineSync()!);
+  // String resultadoMediaNotas = verificarMediaGeral(nota1, nota2, nota3);
+  // print(resultadoMediaNotas);
 
-  print('\n----------');
+  print('\n-----Tabuada-----');
+  print('\nDigite o numero:');
+  int? numero = int.parse(stdin.readLineSync()!);
+  print('\n-----Calculando-----');
+  int resultadoTabuada = tabuada(numero);
+  print(resultadoTabuada);
+
+  // print('\n-----Listas-----');
+
+  // var lista = [1, 20, 53, 13, 13];
+  // lista.add(12);
+
+  // print(lista[2]);
+
+  // for (int i = 0; i < lista.length; i++) {
+  //   print(lista[i]);
+  // }
+
+  // for (var numero in lista) {
+  //   print(numero);
+  // }
+
+  // for (var numero in lista) {
+  //   if (numero == 13) {
+  //     print("está na lista");
+  //     break;
+  //   }
+  // }
 }
+
+// Funções
 
 somar(num1, num2) {
   double resultado = num1 + num2;
@@ -117,5 +145,15 @@ verificarMediaGeral(nota1, nota2, nota3) {
     return "Sua média final foi B";
   } else {
     return "Sua média final foi A";
+  }
+}
+
+   tabuada(int numero) {
+  int i = 1;
+
+  while (i <= 10) {
+    int resultado = i * numero;
+    print("$i X $numero = $resultado");
+    i++;
   }
 }

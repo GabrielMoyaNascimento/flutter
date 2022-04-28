@@ -61,12 +61,12 @@ void main(List<String> arguments) {
   // String resultadoMediaNotas = verificarMediaGeral(nota1, nota2, nota3);
   // print(resultadoMediaNotas);
 
-  print('\n-----Tabuada-----');
-  print('\nDigite o numero:');
-  int? numero = int.parse(stdin.readLineSync()!);
-  print('\n-----Calculando-----');
-  int resultadoTabuada = tabuada(numero);
-  print(resultadoTabuada);
+  // print('\n-----Tabuada-----');
+  // print('\nDigite o numero:');
+  // int? numero = int.parse(stdin.readLineSync()!);
+  // print('\n-----Calculando-----');
+  // int resultadoTabuada = tabuada(numero);
+  // print(resultadoTabuada);
 
   // print('\n-----Listas-----');
 
@@ -89,6 +89,17 @@ void main(List<String> arguments) {
   //     break;
   //   }
   // }
+
+  // print('\n-----Lista-de-numeros-pares-----');
+
+  // pares();
+
+  // print('\n-----Verificar-numero-na-lista-----');
+
+  // print('\nDigite o numero:');
+  // int? numero = int.parse(stdin.readLineSync()!);
+  // String result = encontrarNumero(numero);
+  // print(result);
 }
 
 // Funções
@@ -148,12 +159,36 @@ verificarMediaGeral(nota1, nota2, nota3) {
   }
 }
 
-   tabuada(int numero) {
+tabuada(int numero) {
   int i = 1;
 
   while (i <= 10) {
     int resultado = i * numero;
     print("$i X $numero = $resultado");
     i++;
+  }
+}
+
+pares() {
+  var listaPar = [];
+  for (int numero = 1; numero <= 100; numero++) {
+    if (numero % 2 == 0) {
+      listaPar.add(numero);
+    }
+  }
+
+  for (int i = 0; i < listaPar.length; i++) {
+    print(listaPar[i]);
+  }
+}
+
+encontrarNumero(selecionado) {
+  var lista = [];
+  for (int numero = 1; numero <= 100; numero++) {
+    lista.add(numero);
+  }
+  for (selecionado in lista) {
+    print("O valor está na lista");
+    break;
   }
 }

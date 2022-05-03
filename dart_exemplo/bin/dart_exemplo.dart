@@ -1,6 +1,29 @@
 import 'dart:io';
 
+import '../lib/aluno.dart';
+import '../lib/veiculo.dart';
+
 void main(List<String> arguments) {
+  // var veiculo = Veiculo("Ford", "Ká");
+
+  // print(veiculo.posicao);
+  // veiculo.mover();
+  // print(veiculo.posicao);
+
+  // var carro = Carro(4, "Renault", "Clio");
+  // carro.mover();
+  // print(veiculo.posicao);
+
+  // var bicicleta = Bicicleta("Caloi", "MX");
+  // bicicleta.mover();
+  // print(bicicleta.posicao);
+
+  var aluno1 = Aluno(true, "Marcos", 1.6, 25);
+  var aluno2 = Aluno(false, "Carlos", 1.9, 17);
+  var aluno3 = Tecnico(true, "Carol", 18, 1.67, "Informatica");
+
+  aluno3.exibir();
+
   // print('\n-------------');
 
   // print('Hello Word');
@@ -90,16 +113,16 @@ void main(List<String> arguments) {
   //   }
   // }
 
-  print('\n-----Lista-de-numeros-pares-----');
+  // print('\n-----Lista-de-numeros-pares-----');
 
-  pares();
+  // pares();
 
-  print('\n-----Verificar-numero-na-lista-----');
+  // print('\n-----Verificar-numero-na-lista-----');
 
-  print('\nDigite o numero:');
-  int? numero = int.parse(stdin.readLineSync()!);
-  String result = encontrarNumero(numero);
-  print(result);
+  // print('\nDigite o numero:');
+  // int? numero = int.parse(stdin.readLineSync()!);
+  // String result = encontrarNumero(numero);
+  // print(result);
 }
 
 // Funções
@@ -169,26 +192,26 @@ void main(List<String> arguments) {
 //   }
 // }
 
-pares() {
-  var listaPar = [];
-  for (int numero = 1; numero <= 100; numero++) {
-    if (numero % 2 == 0) {
-      listaPar.add(numero);
-    }
-  }
+// pares() {
+//   var listaPar = [];
+//   for (int numero = 1; numero <= 100; numero++) {
+//     if (numero % 2 == 0) {
+//       listaPar.add(numero);
+//     }
+//   }
 
-  for (int i = 0; i < listaPar.length; i++) {
-    print(listaPar[i]);
-  }
-}
+//   for (int i = 0; i < listaPar.length; i++) {
+//     print(listaPar[i]);
+//   }
+// }
 
-encontrarNumero(selecionado) {
-  var lista = [];
-  for (int numero = 1; numero <= 100; numero++) {
-    lista.add(numero);
-  }
-  for (selecionado in lista) {
-    print("O valor está na lista");
-    break;
-  }
-}
+// encontrarNumero(selecionado) {
+//   var lista = [];
+//   for (int numero = 1; numero <= 100; numero++) {
+//     lista.add(numero);
+//   }
+//   for (selecionado in lista) {
+//     print("O valor está na lista");
+//     break;
+//   }
+// }

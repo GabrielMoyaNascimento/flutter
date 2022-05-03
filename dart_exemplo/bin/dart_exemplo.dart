@@ -10,19 +10,28 @@ void main(List<String> arguments) {
   // veiculo.mover();
   // print(veiculo.posicao);
 
-  // var carro = Carro(4, "Renault", "Clio");
-  // carro.mover();
-  // print(veiculo.posicao);
+  var pessoa = Pessoa("Lucas", 22);
+  var carro = Carro(4, "Renault", "Clio", pessoa);
+  print("O nome do motorista é " + carro.motorista.nome);
+
+  carro.mover();
+  print(carro.posicao);
+  print(carro.combustivel);
+
+  carro.mover();
+  print(carro.posicao);
+  print(carro.combustivel);
 
   // var bicicleta = Bicicleta("Caloi", "MX");
   // bicicleta.mover();
   // print(bicicleta.posicao);
 
-  var aluno1 = Aluno(true, "Marcos", 1.6, 25);
-  var aluno2 = Aluno(false, "Carlos", 1.9, 17);
-  var aluno3 = Tecnico(true, "Carol", 18, 1.67, "Informatica");
+  // var aluno1 = Aluno(true, "Marcos", 1.6, 25);
+  // var aluno2 = Aluno(false, "Carlos", 1.9, 17);
+  // var aluno3 = Tecnico(true, "Carol", 18, 1.67, "Informatica");
 
-  aluno3.exibir();
+  // aluno3.exibir();
+  // mostrarPessoa(aluno3);
 
   // print('\n-------------');
 
@@ -127,6 +136,9 @@ void main(List<String> arguments) {
 
 // Funções
 
+void mostrarPessoa(Aluno a) {
+  a.exibir();
+}
 // somar(num1, num2) {
 //   double resultado = num1 + num2;
 //   return resultado;

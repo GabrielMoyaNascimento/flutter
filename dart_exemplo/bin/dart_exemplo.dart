@@ -4,23 +4,25 @@ import '../lib/aluno.dart';
 import '../lib/veiculo.dart';
 
 void main(List<String> arguments) {
+  // print('\n-------------');
+
   // var veiculo = Veiculo("Ford", "Ká");
 
   // print(veiculo.posicao);
   // veiculo.mover();
   // print(veiculo.posicao);
 
-  var pessoa = Pessoa("Lucas", 22);
-  var carro = Carro(4, "Renault", "Clio", pessoa);
-  print("O nome do motorista é " + carro.motorista.nome);
+  // var pessoa = Pessoa("Lucas", 22);
+  // var carro = Carro(4, "Renault", "Clio", pessoa);
+  // print("O nome do motorista é " + carro.motorista.nome);
 
-  carro.mover();
-  print(carro.posicao);
-  print(carro.combustivel);
+  // carro.mover();
+  // print(carro.posicao);
+  // print(carro.combustivel);
 
-  carro.mover();
-  print(carro.posicao);
-  print(carro.combustivel);
+  // carro.mover();
+  // print(carro.posicao);
+  // print(carro.combustivel);
 
   // var bicicleta = Bicicleta("Caloi", "MX");
   // bicicleta.mover();
@@ -132,13 +134,28 @@ void main(List<String> arguments) {
   // int? numero = int.parse(stdin.readLineSync()!);
   // String result = encontrarNumero(numero);
   // print(result);
+
+  print('\n-----Verificar-valor-nulo-----');
+  int? numero1 = null;
+  int? numero2 = 1;
+  funcaonula(numero1, numero2);
 }
 
 // Funções
 
-void mostrarPessoa(Aluno a) {
-  a.exibir();
+funcaonula(int? valor1, int? valor2) {
+  if (valor1 != null && valor2 != null) {
+    int resultado = valor1 + valor2;
+    print(resultado);
+  } else {
+    print("Valores inválidos");
+  }
 }
+
+
+// void mostrarPessoa(Aluno a) {
+//   a.exibir();
+// }
 // somar(num1, num2) {
 //   double resultado = num1 + num2;
 //   return resultado;

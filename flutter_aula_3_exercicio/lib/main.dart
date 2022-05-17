@@ -28,9 +28,28 @@ class Exercicio extends StatelessWidget {
       appBar: AppBar(
         title: const Text("I am poor"),
       ),
-      body: const Center(
-        child: Image(
-          image: AssetImage("assets/paper.jpg"),
+      body: Center(
+        child: InkWell(
+          onTap: () => showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                    title: const Text("Alerta"),
+                    content: const Text("Alerta descrição"),
+                    actions: [
+                      TextButton(
+                        child: const Text("Não"),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                      TextButton(
+                        child: const Text("Sim"),
+                        onPressed: () => Navigator.of(context).pop(),
+                      )
+                    ],
+                  )),
+          child: const Image(
+            image: AssetImage("assets/paper.jpg"),
+            width: 150,
+          ),
         ),
       ),
     );

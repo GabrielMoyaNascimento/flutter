@@ -34,8 +34,8 @@ class Visit extends StatelessWidget {
             const CircleAvatar(
               radius: 50,
               child: Image(
-                image: AssetImage("assets/paper.jpg"),
-                width: 20,
+                image: AssetImage("assets/anonimus.jpg"),
+                width: 85,
               ),
             ),
             Container(
@@ -48,6 +48,12 @@ class Visit extends StatelessWidget {
               child: const Text(
                 "Estudante do IFPR Campus Paranavaí",
                 style: TextStyle(fontSize: 32, fontFamily: "ZenLoop"),
+              ),
+            ),
+            SizedBox(
+              width: 300,
+              child: Divider(
+                color: Colors.white,
               ),
             ),
             Card(

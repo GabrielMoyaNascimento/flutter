@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_aula_6/calculadora.dart';
 import 'package:flutter_aula_6/constants.dart';
 import 'package:flutter_aula_6/views/results_view.dart';
 import 'package:flutter_aula_6/widgets/bottom_button.dart';
@@ -17,6 +18,7 @@ class _CalculadoraState extends State<Calculadora> {
   int altura = 175;
   int idade = 20;
   int peso = 70;
+  String genero = "";
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,12 @@ class _CalculadoraState extends State<Calculadora> {
               children: [
                 Expanded(
                   child: CustomCard(
+                    cor: genero == "M" ? activeColor : cardColor,
+                    onPressed: () {
+                      setState(() {
+                        genero = "M";
+                      });
+                    },
                     child: IconLabel(
                       label: "Masculino",
                       icon: Icons.male,
@@ -39,6 +47,12 @@ class _CalculadoraState extends State<Calculadora> {
                 ),
                 Expanded(
                   child: CustomCard(
+                    cor: genero == "F" ? activeColor : cardColor,
+                    onPressed: () {
+                      setState(() {
+                        genero = "F";
+                      });
+                    },
                     child: IconLabel(
                       label: "Feminino",
                       icon: Icons.female,
@@ -173,11 +187,19 @@ class _CalculadoraState extends State<Calculadora> {
             ),
           ),
           BottomButton(
-            label: "Calcular",
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Results(),
-            )),
-          )
+              label: "Calcular",
+              onPressed: () {
+                CalculadoraIMC calculadora =
+                    CalculadoraIMC(altura: altura, peso: peso);
+                calculadora.calcular();
+
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Results(
+                          resultado: calculadora.getResultado(),
+                          descricao: calculadora.getDescricao(),
+                          valor: calculadora.getImc(),
+                        )));
+              })
         ],
       ),
     );
